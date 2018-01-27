@@ -25,7 +25,7 @@ config = {
       role = $("#roleInput").val().trim();
       startdate = $("#startInput").val().trim();
       rate = $("#rateInput").val().trim();
-      database.ref().set({
+      database.ref().push({
         name: name,
         role: role,
         startdate: rate,
