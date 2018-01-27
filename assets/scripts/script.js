@@ -15,7 +15,7 @@ config = {
     var startdate = "";
     var rate = "";
     // Capture Button Click
-    $("#add-user").on("click", function() {
+    $("#addEmployeeBtn").on("click", function() {
       // Don't refresh the page!
       event.preventDefault();
       // YOUR TASK!!!
@@ -27,9 +27,9 @@ config = {
       rate = $("#rateInput").val().trim();
       database.ref().set({
         name: name,
-        role: email,
-        startdate: age,
-        rate: comment
+        role: role,
+        startdate: rate,
+        rate: startdate
       });
     });
     // Firebase watcher + initial loader HINT: .on("value")
