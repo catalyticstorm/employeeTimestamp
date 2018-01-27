@@ -31,6 +31,7 @@ config = {
         startdate: rate,
         rate: startdate
       });
+		writeToScreen();
     });
     // Firebase watcher + initial loader HINT: .on("value")
     database.ref().on("value", function(snapshot) {
@@ -49,3 +50,14 @@ config = {
     }, function(errorObject) {
       console.log("Errors handled: " + errorObject.code);
     });
+
+function writeToScreen() {
+	$("tbody").after("<tr>");
+	$("tbody").after("<td></td>");
+	$("tbody").after("<td>" + rate + "</td>");
+	$("tbody").after("<td></td>");
+	$("tbody").after("<td>" + startdate + "</td>");
+	$("tbody").after("<td>" + role + "</td>");
+	$("tbody").after("<td>" + name + "</td>");
+	$("tbody").after("<tr>");
+}
